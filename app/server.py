@@ -4,7 +4,7 @@ from langserve import add_routes
 from app.chain_loader import build_chains
 
 from langchain_community.chat_models import ChatOllama
-from langchain_openai import ChatOpenAI
+# from langchain_openai import ChatOpenAI
 
 from langchain_core.output_parsers import StrOutputParser
 
@@ -16,7 +16,7 @@ import os
 
 #model = ChatOllama(model="mistral-nemo:latest", num_ctx=32768)
 
-model = ChatOllama(model="mistral-nemo:latest", num_ctx=2048)
+model = ChatOllama(model="phi3.5", num_ctx=2048)
 
 chains = build_chains(model)
 
